@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="container-content">
+
+        <h2><img src="../asset/Gemini_Generated_Image_qn78gzqn78gzqn78.png" alt="">  Sign in</h2>
+        <h2 id="success-msg" class="success-msg">Sign In Successfully</h2>
+        <form action="" id="form">
+            
+          
+            <div class="form-group">
+                <input type="text" id="acount-input" placeholder="Email here">
+                <p class="error" id="error-email">Please enter your email...</p>
+            </div>
+
+            
+            <div class="form-group">
+                <input type="password" id="password-input" placeholder="Password here">
+                <p class="error" id="error-password">Please enter your password...</p>
+            </div>
+
+            <button type="button"  class="Login-btn" onclick="login()">Đăng nhập</button>
+
+        </form>
+
+        <div class="footer">
+            <p>Don't have account?</p> 
+            <a href="../pages/register.html">Sign up now</a>
+        </div>
+
+    </div>
+</div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirm Modal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+}
+
+/* overlay */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,#2d3748,#4a5568);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.modal{
+    width:586px;
+    background:#fff;
+    border-radius:10px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* icon */
+.icon{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#FEF3C7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:12px;
+    font-weight:bold;
+    color:#F59E0B;
+}
+
+.modal h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.modal p{
+    font-size:13px;
+    color:#6b7280;
+    margin-bottom:20px;
+    padding-bottom:10px;   
+    border-bottom:1px solid #e5e7eb;
+}
+
+img{
+    width: 62px;
+    height: 60px;
+}
+.actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.btn{
+    padding:8px 14px;
+    border-radius:6px;
+    border:1px solid #ddd;
+    cursor:pointer;
+    background:#fff;
+}
+
+.btn-cancel{
+    color:#374151;
+}
+
+.btn-delete{
+    background:#F59E0B;
+    border:none;
+    color:#fff;
+}
+</style>
+
+</head>
+<body>
+
+<div class="overlay">
+    <div class="modal">
+        <img src="./asset/image (26).png" alt="">
+        <h3>Xác nhận</h3>
+        <p>Bạn có chắc chắn muốn xóa tài khoản này khỏi hệ thống không?</p>
+
+        <div class="actions">
+            <button class="btn btn-cancel">Hủy</button>
+            <button class="btn btn-delete">Xóa</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

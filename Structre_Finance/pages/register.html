@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-content">
+            <h2>Sign Up</h2>
+            <h2 id="success-msg">Sign Up Successfully</h2>
+
+            <form action="" id="form">
+                <div class="form-group">
+                    <input type="text" id="acount-input" placeholder="Email here ...">
+                    <p class="error" id="error-email">Please enter your email...</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password-input" placeholder="Password here ...">
+                    <p class="error" id="error-password">Please enter your password...</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password-input-again" placeholder="Confirm password here ...">
+                    <p class="error" id="error-confirm">Please confirm your password...</p>
+                </div>
+
+                <button type="submit" class="Register-btn">Sign up</button>
+            </form>
+
+            <div class="footer">
+                <p>You have account?</p>
+                <a href="../pages/login.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

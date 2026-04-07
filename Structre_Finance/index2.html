@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure-finance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="outside">
+            <p>📒 Tài Chính Cá Nhân K25_Rikkei</p>
+            <div class="inside">
+                <select id="user-menu">
+                    <option value="">Tài khoản</option>
+                    <option value="logout">Đăng xuất</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-2">
+        <div class="top">
+            <div class="inside-top">
+                <h2>🎯 Kiểm soát chi tiêu thông minh</h2>
+                <p>Theo dõi ngân sách và thu chi hằng tháng dễ dàng</p>
+            </div>
+        </div>
+
+        <div class="mid-2">
+            <h1>📊 Quản Lý Tài Chính Cá Nhân</h1>
+
+            <div class="balance-box-2">
+                <div class="above">
+                    <p class="label">Số tiền còn lại</p>
+                    <h2 class="amount" id="amoutEl">0 VND</h2>
+                </div>
+                <div class="under">
+                    <p class="label">Đã chi</p>
+                    <h2 class="amout-left">0 VND</h2>
+                </div>
+            </div>
+
+            <div class="card card-top card-top-one">
+                <label for="date">📅 Chọn tháng</label>
+                <input type="month" id="date">
+            </div>
+
+            <div class="Category-2">
+                <h3>📁 Quản lý danh mục (Theo tháng)</h3>
+
+                <div class="form-top">
+                    <div class="categories">
+                        <select class="errinput2" id="category-name">
+                            <option value="">Chọn danh mục</option>
+                            <option value="Tiền tích lũy">Tiền tích lũy</option>
+                            <option value="Tiền xăng">Tiền xăng</option>
+                            <option value="Tiền ăn">Tiền ăn</option>
+                            <option value="Tiền đi chơi">Tiền đi chơi</option>
+                            <option value="Tiền cho con">Tiền cho con</option>
+                            <option value="Tiền dự phòng">Tiền dự phòng</option>
+                            <option value="Tiền sửa đồ">Tiền sửa đồ</option>
+                            <option value="Tiền cà phê">Tiền cà phê</option>
+                        </select>
+                        <p class="err-input2 err" id="err-input_one">Please select a category.</p>
+                    </div>
+                    <div class="categories">
+                        <input type="text" class="errinput2" id="limit-money" placeholder="Giới hạn (VND)">
+                        <p class="err-input2 err" id="err-input-two">Please enter the amount of the limit.</p>
+                    </div>
+                    <button id="save-btn2">Thêm danh mục</button>
+                </div>
+                <p class="category-form-error" id="category-form-error"></p>
+
+                <div class="card-list" id="card-list"></div>
+            </div>
+
+            <div class="sidebar">
+                <div class="menu-item">
+                    <img src="./asset/Vector (5).png" alt="">
+                    <a href="./index.html">Information</a>
+                </div>
+                <div class="menu-item active">
+                    <img src="./asset/Vector (4).png" alt="">
+                    <a href="./index2.html">Category</a>
+                </div>
+                <div class="menu-item">
+                    <img src="./asset/Vector (3).png" alt="">
+                    <a href="./index3.html">History</a>
+                </div>
+            </div>
+
+            <div class="modal-logout" id="logout-modal">
+                <div class="modal-content">
+                    <h3>Bạn có chắc muốn đăng xuất?</h3>
+                    <div class="modal-actions">
+                        <button id="cancel-logout">Hủy</button>
+                        <button id="confirm-logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-delete" id="delete-modal">
+                <div class="modal-content">
+                    <h3>Bạn có chắc muốn xóa?</h3>
+                    <div class="modal-actions">
+                        <button id="cancel-delete">Hủy</button>
+                        <button id="confirm-delete">Xóa</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-edit" id="edit-modal">
+                <div class="modal-content modal-content-edit">
+                    <h3>Sửa danh mục</h3>
+                    <div class="edit-form">
+                        <div class="categories">
+                            <label for="edit-category-name">Tên danh mục</label>
+                            <select class="errinput2" id="edit-category-name">
+                                <option value="">Chọn danh mục</option>
+                                <option value="Tiền tích lũy">Tiền tích lũy</option>
+                                <option value="Tiền xăng">Tiền xăng</option>
+                                <option value="Tiền ăn">Tiền ăn</option>
+                                <option value="Tiền đi chơi">Tiền đi chơi</option>
+                                <option value="Tiền cho con">Tiền cho con</option>
+                                <option value="Tiền dự phòng">Tiền dự phòng</option>
+                                <option value="Tiền sửa đồ">Tiền sửa đồ</option>
+                                <option value="Tiền cà phê">Tiền cà phê</option>
+                            </select>
+                            <p class="err-input2 err" id="edit-err-name">Please select a category.</p>
+                        </div>
+                        <div class="categories">
+                            <label for="edit-limit-money">Giới hạn</label>
+                            <input type="text" class="errinput2" id="edit-limit-money" placeholder="Giới hạn (VND)">
+                            <p class="err-input2 err" id="edit-err-limit">Please enter the amount of the limit.</p>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button id="cancel-edit">Hủy</button>
+                        <button id="confirm-edit">Lưu thay đổi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

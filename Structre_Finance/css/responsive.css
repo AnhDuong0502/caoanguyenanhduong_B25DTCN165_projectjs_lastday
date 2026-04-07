@@ -1,0 +1,206 @@
+.history-box .pagination {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .outside {
+        padding: 16px 32px;
+    }
+
+    .container,
+    .container-2 {
+        max-width: 100%;
+        padding: 20px 24px 32px;
+    }
+
+    .sidebar {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .menu-item {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .information {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .form-top {
+        flex-wrap: wrap;
+    }
+
+    .form-top .categories {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 240px;
+    }
+
+    .form-top button {
+        flex: 1 1 100%;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .tools {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        flex: 1 1 280px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .outside {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 14px 16px;
+    }
+
+    .inside {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container,
+    .container-2 {
+        padding: 16px;
+    }
+
+    .top {
+        height: auto;
+        padding: 20px 16px;
+        text-align: center;
+    }
+
+    .card,
+    .information,
+    .Category,
+    .Category-2,
+    .history-box,
+    .form-box {
+        padding: 14px;
+    }
+
+    .balance-box,
+    .balance-box-2 {
+        height: auto;
+    }
+
+    .card-top,
+    .card-top-two form,
+    .form-top,
+    .form-box,
+    .tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-top {
+        gap: 12px;
+    }
+
+    .form-top .categories,
+    .form-top input,
+    .form-top select,
+    .form-top button,
+    .form-box input,
+    .form-box select,
+    .form-box button,
+    .report-btn,
+    .sort-btn,
+    .search-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .search-box {
+        display: flex;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .history-box {
+        overflow-x: auto;
+    }
+
+    .history-table {
+        min-width: 640px;
+    }
+
+    .history-box .pagination {
+        margin-top: 16px;
+    }
+
+    .modal-content,
+    .modal-content-edit {
+        width: min(100%, 420px);
+    }
+}
+
+@media (max-width: 480px) {
+    .outside {
+        font-size: 12px;
+    }
+
+    .mid h1,
+    .mid-2 h1 {
+        font-size: 16px;
+    }
+
+    .card,
+    .information,
+    .Category,
+    .Category-2,
+    .history-box,
+    .form-box {
+        padding: 12px;
+    }
+
+    .history-box .pagination {
+        gap: 4px;
+    }
+
+    .history-box .pagination button {
+        min-width: 36px;
+        padding: 6px 8px;
+    }
+
+    .alert-box {
+        width: calc(100% - 24px);
+        right: 12px;
+        top: 84px;
+    }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure-finance</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="outside">
+            <p>📒 Tài Chính Cá Nhân K25_Rikkei</p>
+            <div class="inside">
+                <select id="user-menu">
+                    <option value="">Tài khoản</option>
+                    <option value="logout">Đăng xuất</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="top">
+            <div class="inside-top">
+                <h2>🎯 Kiểm soát chi tiêu thông minh</h2>
+                <p>Theo dõi ngân sách và thu chi hằng tháng dễ dàng</p>
+            </div>
+        </div>
+
+        <div class="mid">
+            <h1>📊 Quản Lý Tài Chính Cá Nhân</h1>
+
+            <div class="balance-box">
+                <div class="above">
+                <p class="label">Số tiền còn lại</p>
+                <h2 class="amount" id="amoutEl">0 VND</h2>
+                </div>
+                <div class="under">
+                <p class="label">Đã chi</p>
+                <h2 class="amout-left"></h2>
+                </div>
+            </div>
+
+            <div class="card card-top card-top-one">
+                <label for="date">📅 Chọn tháng</label>
+                <input type="month" id="date">
+                
+            </div>
+
+            <div class="card card-top card-top-two">
+               <form>
+             <label for="budget">💰 Ngân sách tháng :</label>
+
+            <div class="input-group">
+            <input type="number" id="budget" placeholder="VD: 5000000">
+           
+             </div>
+             
+             <button type="submit" id="save-btn">Lưu</button>
+              
+        </form>
+        <p class="errbutget" id="errbutget">Please enter the amount</p>
+            </div>
+
+            <div class="information">
+                <h3 class="profile-management__title">Quản Lý Thông tin cá nhân</h3>
+
+                <div class="profile-overview-grid">
+                    <label class="profile-field" for="name">
+                        <span>Name <strong>*</strong></span>
+                        <input type="text" id="name" placeholder="Name" readonly>
+                    </label>
+                    <label class="profile-field" for="email">
+                        <span>Email <strong>*</strong></span>
+                        <input type="text" id="email" placeholder="Email" readonly>
+                    </label>
+                    <label class="profile-field" for="phone">
+                        <span>Phone <strong>*</strong></span>
+                        <input type="tel" id="phone" placeholder="Phone" readonly>
+                    </label>
+                    <label class="profile-field" for="gender">
+                        <span>Gender <strong>*</strong></span>
+                        <input type="text" id="gender" placeholder="Gender" readonly>
+                    </label>
+                </div>
+
+                <div class="profile-action-row">
+                    <button type="button" class="profile-action-btn" id="open-change-info">Change Information</button>
+                    <button type="button" class="profile-action-btn profile-action-btn--ghost" id="open-change-password">Change Password</button>
+                </div>
+
+                <p class="profile-feedback" id="profile-feedback"></p>
+                <p class="profile-feedback" id="password-feedback"></p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="menu-item active">
+                <img src="./asset/Vector (5).png" alt="">
+                <a href="./index.html">Information</a>
+            </div>
+            <div class="menu-item">
+                <img src="./asset/Vector (4).png" alt="">
+                <a href="./index2.html">Category</a>
+            </div>
+            <div class="menu-item">
+                <img src="./asset/Vector (3).png" alt="">
+                <a href="./index3.html">History</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-logout" id="logout-modal">
+        <div class="modal-content">
+            <h3>Bạn có chắc muốn đăng xuất?</h3>
+            <div class="modal-actions">
+                <button id="cancel-logout">Hủy</button>
+                <button id="confirm-logout">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="account-modal" id="change-info-modal">
+        <div class="account-modal-card account-modal-card--info">
+            <div class="account-modal-header">
+                <h3>Change Information</h3>
+                <button type="button" class="account-modal-close" data-close-modal="change-info-modal">&times;</button>
+            </div>
+
+            <div class="account-modal-body">
+                <div class="account-form-grid account-form-grid--single">
+                    <label class="account-form-group" for="modal-name">
+                        <span>Name <strong>*</strong></span>
+                        <input type="text" id="modal-name" placeholder="Enter your name">
+                    </label>
+                    <label class="account-form-group" for="modal-email">
+                        <span>Email <strong>*</strong></span>
+                        <input type="email" id="modal-email" placeholder="Enter your email">
+                    </label>
+                    <label class="account-form-group" for="modal-phone">
+                        <span>Phone <strong>*</strong></span>
+                        <input type="tel" id="modal-phone" placeholder="Enter your phone number">
+                    </label>
+                    <label class="account-form-group" for="modal-gender">
+                        <span>Gender <strong>*</strong></span>
+                        <select id="modal-gender">
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                </div>
+
+                <p class="account-modal-error" id="change-info-error"></p>
+            </div>
+
+            <div class="account-modal-actions">
+                <button type="button" class="account-cancel-btn" data-close-modal="change-info-modal">Cancel</button>
+                <button type="button" class="account-save-btn" id="save-change-info">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="account-modal" id="change-password-modal">
+        <div class="account-modal-card">
+            <div class="account-modal-header">
+                <h3>Change Password</h3>
+                <button type="button" class="account-modal-close" data-close-modal="change-password-modal">&times;</button>
+            </div>
+
+            <div class="account-modal-body">
+                <div class="account-form-grid account-form-grid--single">
+                    <label class="account-form-group" for="old-password">
+                        <span>Old Password <strong>*</strong></span>
+                        <input type="password" id="old-password" placeholder="Enter old password">
+                    </label>
+                    <label class="account-form-group" for="new-password">
+                        <span>New Password <strong>*</strong></span>
+                        <input type="password" id="new-password" placeholder="Enter new password">
+                    </label>
+                    <label class="account-form-group" for="confirm-password">
+                        <span>Confirm New Password <strong>*</strong></span>
+                        <input type="password" id="confirm-password" placeholder="Confirm new password">
+                    </label>
+                </div>
+
+                <p class="account-modal-error" id="change-password-error"></p>
+            </div>
+
+            <div class="account-modal-actions">
+                <button type="button" class="account-cancel-btn" data-close-modal="change-password-modal">Cancel</button>
+                <button type="button" class="account-save-btn" id="save-change-password">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
